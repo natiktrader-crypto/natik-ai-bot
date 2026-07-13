@@ -1,0 +1,29 @@
+services:
+  - type: worker
+    name: natik-ai-multibot
+    env: python
+    buildCommand: pip install pytelegrambotapi httpx anthropic
+    startCommand: python ai-bot/bot.py
+    envVars:
+      - key: AI_BOT_TOKEN
+        sync: false
+      - key: ANTHROPIC_API_KEY
+        sync: false
+      - key: OPENROUTER_API_KEY
+        sync: false
+      - key: GEMINI_API_KEY
+        sync: false
+      - key: GROQ_API_KEY
+        sync: false
+      - key: MISTRAL_API_KEY
+        sync: false
+      - key: COHERE_API_KEY
+        sync: false
+      - key: CEREBRAS_API_KEY
+        sync: false
+      - key: DEEPSEEK_API_KEY
+        sync: false
+      - key: GITHUB_MODELS_TOKEN
+        sync: false
+      - key: CHATANYWHERE_API_KEY
+        sync: false
